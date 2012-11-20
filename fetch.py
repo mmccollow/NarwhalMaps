@@ -22,7 +22,7 @@ def parse():
 	for link in links:
 		href = link.attrMap['href']
 		title = link.text
-		output.append((title, href))
+		output.append({'title': title, 'href': href})
 	return output
 
 def toJson(l):
