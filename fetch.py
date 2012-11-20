@@ -3,7 +3,6 @@
 from BeautifulSoup import BeautifulSoup as BS
 import urllib
 import urllib2
-import json
 
 SOURCE_URL = "http://www.reddit.com/r/MapPorn/top/?sort=top&t=day"
 
@@ -24,7 +23,4 @@ def parse():
 		title = link.text
 		output.append({'title': title, 'href': href})
 	return output
-
-def toJson(l):
-	return json.dumps(l)
 
