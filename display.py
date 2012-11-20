@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
 from flask import Flask
+import fetch
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/slideshow')
 def slideshow():
-	pass
+	data = fetch.toJson(fetch.parse())
+	return render_template("slideshow.html", data=data)
 
 if __name__ == '__main__':
 	app.run()
