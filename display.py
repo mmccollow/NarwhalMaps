@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 @app.route('/slideshow')
 def slideshow():
-	data = fetch.toJson(fetch.parse())
-	return render_template("slideshow.html", data=data)
+	links = fetch.toJson(fetch.parse())
+	return render_template("slideshow.html", links=links)
 
 if __name__ == '__main__':
 	app.run()
