@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from BeautifulSoup import BeautifulSoup as BS
-import urllib
 import urllib2
 import urlparse
 import re
