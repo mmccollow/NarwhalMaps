@@ -5,10 +5,12 @@
 		<meta charset="utf-8" />
 	</head>
 	<body>
-	<ul>
 	{% for link in links %}
-		<li><a href="{{ link.href }}">{{ link.title }}</a></li>
+		<a href="{{ link.href }}" title="{{ link.title }}">
+			<img src="{{ link.href }}" alt="Map image" />
+		</a>
 	{% endfor %}
-	</ul>
+	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/slides.js') }}"></script>
 	</body>
 </html>
