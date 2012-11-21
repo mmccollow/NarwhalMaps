@@ -5,12 +5,19 @@
 		<meta charset="utf-8" />
 	</head>
 	<body>
-	{% for link in links %}
-		<a href="{{ link.href }}" title="{{ link.title }}">
-			<img src="{{ link.href }}" alt="Map image" />
-		</a>
-	{% endfor %}
+		<div id="slides">
+			<div class="slides_container">
+				{% for link in links %}
+					<div>
+						<a href="{{ link.href }}" title="{{ link.title }}">
+							<img src="{{ link.href }}" alt="Map image" />
+						</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
 	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/slides.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
 	</body>
 </html>
