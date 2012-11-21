@@ -3,8 +3,10 @@
 from BeautifulSoup import BeautifulSoup as BS
 import urllib
 import urllib2
+import urlparse
+import re
 
-SOURCE_URL = "http://www.reddit.com/r/MapPorn/top/?sort=top&t=day"
+SOURCE_URL = "http://www.reddit.com/r/MapPorn/top/?sort=top&t=week"
 
 def fetch():
 	headers = {'User-Agent' : 'Mozilla/5 (Linux i386) Gecko'}
@@ -19,8 +21,13 @@ def parse():
 	links = html.findAll('a', 'title')
 	output = []
 	for link in links:
-		href = link.attrMap['href']
-		title = link.text
-		output.append({'title': title, 'href': href})
+		url = link.attrMap['href']
+		url_parts = urlparse.urlsplit(url)
+		if re.match('^.+\.imgur\.com', url_parts.netloc): # we only want to show images hosted on imgur
+			if url[-4:] != '.jpg': # make sure we're pulling the image, not the HTML page
+				url += '.jpg'
+			href = url 
+			title = link.text
+			output.append({'title': title, 'href': href})
 	return output
 
