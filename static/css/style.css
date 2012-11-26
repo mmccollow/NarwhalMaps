@@ -12,11 +12,12 @@ body {
 	width:900px;
 	padding:10px;
 	margin:auto;
-	position:absolute;
+	/*position:absolute;*/
 }
 
 #slides {
-	position:absolute;
+	/*position:absolute;*/
+	margin:auto;
 	top:15px;
 	left:4px;
 }
