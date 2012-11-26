@@ -11,7 +11,7 @@
 				{% for link in links %}
 					<div>
 						<a href="{{ link.href }}" title="{{ link.title }}">
-							<img src="{{ link.href }}" alt="Map image" />
+							<img src="static/images/{{ link.filename }}" alt="Map image" />
 						</a>
 					</div>
 				{% endfor %}

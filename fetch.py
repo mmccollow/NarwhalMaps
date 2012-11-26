@@ -19,7 +19,7 @@ def fetch_new_images():
 		if re.match('^.+\.imgur\.com', url_parts.netloc): # we only want to pull images from imgur
 			if url[-4:] not in ['.jpg', '.png']: # make sure we're pulling the image, not the HTML page
 				continue
-			new_images.append({'title': post.text, 'href': url})
+			new_images.append({'title': post.text, 'href': url, 'filename': _get_filename_from_url(url)})
 	_cache_images(new_images)
 	return new_images 
 
