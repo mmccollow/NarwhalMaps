@@ -6,17 +6,19 @@
 		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<div id="slides">
-			<div class="slides_container">
-				{% for link in links %}
-					<div>
-						<a href="{{ link.href }}" title="{{ link.title }}">
-							<img src="static/images/{{ link.filename }}" alt="Map image" />
-						</a>
-					</div>
-				{% endfor %}
-			</div>
-		</div>
+		<div id="container">
+			<div id="slides">
+				<div class="slides_container">
+					{% for link in links %}
+						<div>
+							<a href="{{ link.href }}" title="{{ link.title }}">
+								<img src="static/images/{{ link.filename }}" alt="Map image" />
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+			</div> <!-- slides -->
+		</div> <!-- container -->
 	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/slides.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>

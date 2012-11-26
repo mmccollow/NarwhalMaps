@@ -1,3 +1,47 @@
 .pagination {
 	display: none;
 }
+
+#container {
+	width:700px;
+	padding:10px;
+	margin:0 auto;
+	z-index:0;
+}
+
+#slides {
+	position:absolute;
+	top:15px;
+	left:4px;
+	z-index:100;
+}
+
+.slides_container {
+	width:700px;
+	overflow:hidden;
+	position:relative;
+}
+
+.slides_container div.slide {
+	width:700px;
+	height:700px;
+	display:block;
+}
+
+.caption {
+	z-index:500;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:30px;
+	padding:5px 20px 0 20px;
+	background:#000;
+	background:rgba(0, 0, 0, 0.5);
+	width:700px;
+	font-size:1.3em;
+	line-height:1.33;
+	color:#fff;
+	border-top:1px solid #000;
+	text-shadow:none;
+}
+
