@@ -58,7 +58,7 @@ def _get_filename_from_url(url):
 
 def _scale_image(image):
 	print "Scaling image", image
-	size = 700, 700
+	size = 900, 700
 	try:
 		im = Image.open(IMAGES + image)
 		im.thumbnail(size, Image.ANTIALIAS)

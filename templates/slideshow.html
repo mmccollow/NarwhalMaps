@@ -10,10 +10,13 @@
 			<div id="slides">
 				<div class="slides_container">
 					{% for link in links %}
-						<div>
+						<div class="slide">
 							<a href="{{ link.href }}" title="{{ link.title }}">
 								<img src="static/images/{{ link.filename }}" alt="Map image" />
 							</a>
+							<div class="caption">
+								<p>{{ link.title }}</p>
+							</div>
 						</div>
 					{% endfor %}
 				</div>
