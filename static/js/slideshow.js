@@ -1,6 +1,6 @@
 $(function() {
 	$('#slides').slides({
-		play: 5000,
+		play: 15000,
 		pause: 2500,
 		animationStart: function(current) {
 			$('.caption').animate({

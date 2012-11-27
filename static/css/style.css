@@ -12,11 +12,9 @@ body {
 	width:900px;
 	padding:10px;
 	margin:auto;
-	/*position:absolute;*/
 }
 
 #slides {
-	/*position:absolute;*/
 	margin:auto;
 	top:15px;
 	left:4px;
@@ -50,3 +48,7 @@ body {
 	text-shadow:none;
 }
 
+#sources {
+	text-align:center;
+	font-size:0.8em;
+}
